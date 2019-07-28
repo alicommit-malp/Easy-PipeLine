@@ -1,7 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Title>Easy Pipeline creator</Title>
+    <Authors>Ali Alp</Authors>
+    <Description>An easy implementation of chain of responsibility with builder pattern which will give a ready to use pipeline foundation </Description>
+    <Copyright>Ali Alp 2019</Copyright>
+    <PackageProjectUrl>https://github.com/alicommit-malp/com.appelinda.nuget.EasyPipeLine</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/alicommit-malp/com.appelinda.nuget.EasyPipeLine/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/alicommit-malp/com.appelinda.nuget.EasyPipeLine</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>ChainOfResponsibility,Builder,Pipeline</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
