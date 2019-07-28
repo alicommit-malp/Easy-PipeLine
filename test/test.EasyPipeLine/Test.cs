@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using NUnit.Framework;
 using test.EasyPipeLine.Handlers;
 
@@ -7,7 +8,7 @@ namespace test.EasyPipeLine
     public class Test
     {
         [Test]
-        public void Test1()
+        public async Task Test1()
         {
             var order = new OrderData()
             {
@@ -15,7 +16,7 @@ namespace test.EasyPipeLine
                 State = "None"
             };
 
-            new OrderHandler()
+            await new OrderHandler()
                 .SetRoot()
                 .Next(new CheckoutHandler())
                 .Next(new ProducingHandler())

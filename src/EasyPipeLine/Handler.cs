@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+
 namespace EasyPipeLine
 {
     public abstract class Handler
@@ -20,10 +22,10 @@ namespace EasyPipeLine
             return _nextHandler;
         }
 
-        public void Run(IHandlerData data)
+        public async Task Run(IHandlerData data)
         {
             if(_isRoot)
-               Handle(data);
+               await Handle(data);
             else
             {
                 _prevHandler?.Run(data);
@@ -31,9 +33,9 @@ namespace EasyPipeLine
         }
 
 
-        protected virtual void Handle(IHandlerData data)
+        protected virtual async Task Handle(IHandlerData data)
         {
-            _nextHandler?.Handle(data);
+            if (_nextHandler != null) await _nextHandler?.Handle(data);
         }
     }
 }
