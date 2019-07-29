@@ -12,6 +12,7 @@
     <RepositoryType>Git</RepositoryType>
     <PackageTags>ChainOfResponsibility,Builder,Pipeline</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageVersion>1.1.0</PackageVersion>
   </PropertyGroup>
 
 </Project>
