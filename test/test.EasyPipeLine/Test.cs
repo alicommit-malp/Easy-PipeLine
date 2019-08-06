@@ -16,8 +16,9 @@ namespace test.EasyPipeLine
                 State = "None"
             };
 
-            await new OrderHandler()
+            await new ExceptionHandler()
                 .SetRoot()
+                .Next(new OrderHandler())
                 .Next(new CheckoutHandler())
                 .Next(new ProducingHandler())
                 .Run(order);
