@@ -1,4 +1,4 @@
-#Easy pipeline in c#
+# Easy pipeline in c#
 If you want to create a pipeline looks like MiddleWares in the Dotnet core you should use the chain of responsibility design pattern. To ease the implementation I have created a Nuget library in order to easily create a pipeline for your application by using the chain of responsibility and builder patterns together.
 
 Let's say we are going to handle the logic of a coffee shop, the steps are 
@@ -92,6 +92,3 @@ public abstract class Handler
 ```
 
 Find the nuget [here](https://www.nuget.org/packages/EasyPipeLine)
- 
-Check out the source code [here](https://github.com/alicommit-malp/com.appelinda.nuget.EasyPipeLine) 
-
