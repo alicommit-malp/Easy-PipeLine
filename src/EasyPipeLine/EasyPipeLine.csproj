@@ -7,7 +7,7 @@
     <Description>An easy implementation of chain of responsibility with builder pattern which will give a ready to use pipeline foundation </Description>
     <Copyright>Ali Alp 2020</Copyright>
     <PackageProjectUrl>https://github.com/alicommit-malp/Easy-PipeLine</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/alicommit-malp/Easy-PipeLine/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/alicommit-malp/Easy-PipeLine</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>ChainOfResponsibility,Pipeline</PackageTags>
