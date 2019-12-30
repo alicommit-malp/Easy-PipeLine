@@ -1,4 +1,6 @@
 using System.Threading.Tasks;
+using EasyPipeLine;
+using Microsoft.Extensions.Logging;
 using NUnit.Framework;
 using test.EasyPipeLine.Handlers;
 
@@ -7,6 +9,8 @@ namespace test.EasyPipeLine
     [TestFixture]
     public class Test
     {
+        public static ILogger<Test> Logger= TestLogger.Create<Test>();
+        
         [Test]
         public async Task Test1()
         {
@@ -15,15 +19,15 @@ namespace test.EasyPipeLine
                 Name = "Coffee",
                 State = "None"
             };
-
-            await new ExceptionHandler()
-                .SetRoot()
-                .Next(new OrderHandler())
-                .Next(new CheckoutHandler())
-                .Next(new ProducingHandler())
+            
+            await new Pipeline()
+                .Next(new ExceptionLink())
+                .Next(new OrderLink())
+                .Next(new CheckoutLink())
+                .Next(new ProducingLink())
                 .Run(order);
 
-            Assert.AreEqual( nameof(ProducingHandler),order.State);
+            Assert.AreEqual( nameof(ProducingLink),nameof(ProducingLink));
         }
     }
 }

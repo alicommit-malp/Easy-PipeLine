@@ -1,20 +1,23 @@
 using System;
 using System.Threading.Tasks;
 using EasyPipeLine;
+using Microsoft.Extensions.Logging;
+using NUnit.Framework;
 
 namespace test.EasyPipeLine.Handlers
 {
-    public class ExceptionHandler : Handler
+    public class ExceptionLink : Link
     {
-        protected override async Task Handle(IHandlerData data)
+        protected override async Task InvokeAsync(ILinkData data)
         {
+            Test.Logger.LogTrace(nameof(ExceptionLink));
             try
             {
-                await base.Handle(data);
+                await base.InvokeAsync(data);
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Test.Logger.LogError(e.Message);
                 //handle the exception here 
             }
         }
