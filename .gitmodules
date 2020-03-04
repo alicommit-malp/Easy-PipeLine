@@ -4,3 +4,6 @@
 [submodule "Easy-PipeLine-Android"]
 	path = Easy-PipeLine-Android
 	url = https://github.com/alicommit-malp/Easy-PipeLine-Android
+[submodule "Easy-Pipeline-IOS"]
+	path = Easy-Pipeline-IOS
+	url = https://github.com/alicommit-malp/Easy-Pipeline-IOS.git
